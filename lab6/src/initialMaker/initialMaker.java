@@ -1,0 +1,40 @@
+package initialMaker;
+import java.util.Scanner;
+public class initialMaker 
+{
+	public static void main(String args[])
+	{
+		System.out.println(initialMaker(" h y t u "));
+		System.out.println(vowel("zbndfghrte"));
+	}
+	public static String initialMaker(String fullName)
+	{
+		String init = "";
+		Scanner scan = new Scanner(fullName);
+		
+		while (scan.hasNext()){
+		
+		
+		init += scan.next().charAt(0);
+		
+		
+		}
+		return init;
+	}
+	public static int vowel(String fullName)
+	{
+		int result = 0;
+		for (int i = 0; i <= fullName.length();i++)
+		{
+			char ch = fullName.charAt(i);
+			if ("aeiouAEIOU".indexOf(ch) >= 0)
+			{
+				result = i;
+				return result;
+			}
+		}
+		return -1;
+
+	}
+}
+

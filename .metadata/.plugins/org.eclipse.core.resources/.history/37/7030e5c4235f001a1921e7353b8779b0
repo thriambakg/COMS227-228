@@ -1,0 +1,39 @@
+package initialMaker;
+import java.util.Scanner;
+public class initialMaker 
+{
+	public static void main(String args[])
+	{
+		System.out.println(initialMaker(" h y t u "));
+		System.out.println(vowel("stupid"));
+	}
+	public static String initialMaker(String fullName)
+	{
+		String init = "";
+		Scanner scan = new Scanner(fullName);
+		
+		while (scan.hasNext()){
+		
+		
+		init += scan.next().charAt(0);
+		
+		
+		}
+		return init;
+	}
+	public static int vowel(String fullName)
+	{
+		int result = 0;
+		Scanner scan = new Scanner(fullName);
+		for (int i=0;i < fullName.length();i++)
+		{
+			if (scan.next().charAt(i) == 'a'||scan.next().charAt(i) == 'e'||scan.next().charAt(i) == 'i'||scan.next().charAt(i) == 'o'||scan.next().charAt(i) == 'u'||scan.next().charAt(i) == 'A'||scan.next().charAt(i) == 'E'||scan.next().charAt(i) == 'I'||scan.next().charAt(i) == 'O'||scan.next().charAt(i) == 'U' )
+			{
+				result += i;
+				return result;
+			}
+		}
+		return -1;
+	}
+}
+

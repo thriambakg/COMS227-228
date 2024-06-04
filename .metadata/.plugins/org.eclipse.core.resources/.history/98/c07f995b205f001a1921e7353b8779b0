@@ -1,0 +1,25 @@
+package initialMaker;
+import java.util.Scanner;
+public class initialMaker 
+{
+	public static void main(String args[])
+	{
+		System.out.println(initialMaker("Billy Joe"));
+	}
+	public static String initialMaker(String name)
+	{
+		String init = null;
+		for (int i=0;i<name.length(); i++)
+		{
+			init += name.charAt(i);
+			if (name.charAt(i) == ' ')
+			{
+				init += name.charAt(i+1);
+				break;
+			}
+			
+		}
+		return name;
+	}
+	
+}

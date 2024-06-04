@@ -1,0 +1,25 @@
+package initialMaker;
+import java.util.Scanner;
+public class initialMaker 
+{
+	public static void main(String args[])
+	{
+		System.out.println(initialMaker(" h y t u "));
+	}
+	public static String initialMaker(String fullName)
+	{
+		String init = "";
+		Scanner scan = new Scanner(fullName);
+		
+		while (scan.hasNext()){
+		
+		
+		init += scan.next().charAt(0);
+		
+		
+		}
+		return init;
+	}
+	
+	
+}
